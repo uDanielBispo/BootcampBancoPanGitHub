@@ -19,3 +19,67 @@ O ********GitHub******** é uma plataforma de hospedagem de códiogo para contro
 **Token de acesso pessoal** - É uma senha aleatória gerada para que você possa colaborar no seu repositório, evita que você utilize sua senha pessoal do git
 
 [**SSH** ](Versionamento%20de%20co%CC%81digo%20com%20Git%20e%20GitHub%20b1037f034ea444fd93fc9f494af72273/SSH%20a4385154207f42bd824adbd7c846838a.md)
+
+### Recuperando versão
+
+```bash
+GIT RESTORE nomearquivo.ext
+```
+
+Esse código recupera a ultima versão e descarta as alterações antes feitas.
+
+### Corrigindo a última mensagem de commit
+
+```bash
+GIT COMMIT --AMEND -M "Corrige commit"
+```
+
+### Restaurando commit anterior
+
+```bash
+git reset --soft hash do commit
+```
+
+### Forma diferente de criar repositório
+
+Você pode anexar um repositório remoto a um repositório local sem precisar fazer o comando ********************git clone******************** 
+
+Exemplo:
+
+Abra o terminal em um diretório
+
+```bash
+mkdir diretorio
+cd diretorio
+git init
+git add origin URL
+```
+
+Após isso você poderá realizar o **git push**
+
+## **Trabalhando com Branches - Criando, Mesclando, Deletando e Tratando Conflitos**
+
+Criando uma branch:
+
+```bash
+git checkout -b nomeBranch
+```
+
+A partir desse momento, ao commitar novamente, a **branch** tomará seu próprio rumo e apontará sozinha para os outros commits, enquanto a **main** ficará apontando para o ultimo commit
+
+```bash
+git checkout main **// para voltar basta realizar**
+git branch -v **// mostra os ultimos commits de cada branch**
+git branch **//** ******************************************************************************para descobrir todas as branchs criadas******************************************************************************
+git merge branchName **// para mesclar as branchs faça**
+git branch -d branchName ******************// para excluir branch******************
+git pull = git feth + git merge
+git diff branch1 branch2 
+git stash ******// arquiva sua alteração que voce não deseja levar para a main******
+```
+
+Recomendação de leitura 3.branching
+
+[Git - Book](https://git-scm.com/book/en/v2)
+
+[https://github.com/elidianaandrade/dio-curso-git-github](https://github.com/elidianaandrade/dio-curso-git-github)
